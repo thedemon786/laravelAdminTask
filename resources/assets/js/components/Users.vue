@@ -60,7 +60,7 @@
         methods: {
             fetchUsers(page_url) {
                 let vm = this;
-                page_url = page_url || 'http://127.0.0.1:8000/api/users';
+                page_url = page_url || '/api/users';
                 fetch(page_url)
                     .then(res => res.json())
                     .then(res => {
@@ -80,7 +80,7 @@
             },
             deleteUser(id) {
                 if (confirm('Are You Sure?')) {
-                    fetch(`http://127.0.0.1:8000/api/user/${id}`, {
+                    fetch(`/api/user/${id}`, {
                             method: 'delete'
                         })
                         .then(res => res.json())
@@ -95,7 +95,7 @@
                 if (this.edit === false) {
                     // Add
                     alert('Disabled this funcionality. Click edit button if you want to edit a user');
-                    // fetch('http://127.0.0.1:8000/api/user', {
+                    // fetch('/api/user', {
                     //         method: 'post',
                     //         body: JSON.stringify(this.user),
                     //         headers: {
@@ -111,7 +111,7 @@
                     //     .catch(err => console.log(err));
                 } else {
                     // Update
-                    fetch('http://127.0.0.1:8000/api/user', {
+                    fetch('/api/user', {
                             method: 'put',
                             body: JSON.stringify(this.user),
                             headers: {

@@ -22,9 +22,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //admin routes
-// Route::get('/register/admin', 'AdminController@create');
+Route::get('/register/admin', 'AdminController@create');
 Route::get('/login/admin', 'AdminController@loginAdmin');
-// Route::post('/register/admin', 'AdminController@registerAdmin')->name('register.admin');
+Route::post('/register/admin', 'AdminController@registerAdmin')->name('register.admin');
 Route::post('/login/admin', 'AdminController@adminAuth')->name('login.admin');
 
 //admin routes we want protected using the admin guard
