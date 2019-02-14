@@ -33,7 +33,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
  Route::delete('user/{id}', 'UserController@destroy');
 
    
-Route::group(['middleware'=>'auth:admin'], function(){
+// Route::group(['middleware'=>'auth:admin'], function(){
    
-    });
+//     });
 
